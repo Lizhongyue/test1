@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+   window.onload=function()
+   {
+	   var shi=document.getElementById("h").value*1;
+	   var fen=document.getElementById("m").value*1;
+	   var miao=document.getElementById("s").value*1;
+	   var bt1=document.getElementById("btn1");
+	   var bt2=document.getElementById("btn2");
+	   var bt3=document.getElementById("btn3");
+	   var timer="";
+	   
+	  
+	   bt1.onclick=function()
+	   {
+		   
+		   
+		   timer=setInterval(function()
+		   {
+			  
+			  miao++;
+			  
+			  if(miao>9)
+			   {
+				   fen++;
+				   miao=0;
+			   }
+			    if(fen>9)
+			   {
+				   shi++;
+				   fen=0;
+			   }
+			    if(shi>9)
+			   {
+				   
+				   shi=0;
+			   }
+			  document.getElementById("s").value=miao;
+		   },1000)
+	   }
+	  /* bt2.onclick=function()
+	   {
+		   clearInterval(timer);
+	   }
+	   bt3.onclick=function()
+	   {
+		   clearInterval(timer);
+		   miao="00";
+		   fen="00";
+		   shi="00";
+	   }
+	   */
+	   
+	   
+	   
+   }
+</script>
+</head>
+
+<body>
+<input type="text" value="00" id="h"/>时
+<input type="text" value="00" id="m"/>分
+<input type="text" value="00" id="s"/>秒
+<input type="button" value="开始" id="btn1" />
+<input type="button" value="停止" id="btn2" />
+<input type="button" value="清零" id="btn3" />
+</body>
+</html>

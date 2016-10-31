@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+div{width:200px;
+    height:200px;
+	background:#F00;
+	position:fixed;
+	bottom:5px;
+	right:5px;
+	display:none;}
+#span1{cursor:pointer;}
+</style>
+<script type="text/javascript">
+    function get1()
+	{
+		document.getElementById("div1").style.display="block";
+	}
+	
+setTimeout("get1()",1000);
+
+	
+	
+	function none()
+	{
+		document.getElementById("div1").style.display="none";
+	}
+	var i=15;
+	setInterval(
+	function()
+	{
+		i--;
+		if(i>0)
+		{
+			document.getElementById("a").innerHTML=i;
+		}
+		else
+		{
+			document.getElementById("div1").style.display="none";
+		}
+		
+	}
+	,1000)
+	
+</script>
+</head>
+
+<body>
+<div id="div1">
+<span id="span1" onclick="none()">X</span> 
+广告还有<span id="a"></span>秒自动关闭
+</div>
+</body>
+</html>

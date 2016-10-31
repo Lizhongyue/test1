@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{padding:0;margin:0;}
+div{width:100px;
+    height:100px;
+	background:#F36;
+	position:absolute;
+	top:100px;
+	left:-100px;}
+span{width:40px;
+    height:40px;
+	background:#FC6;
+	display:block;
+	text-align:center;
+	line-height:40px;
+	position:absolute;
+	right:-40px;
+	top:20px;}
+</style>
+
+<script type="text/javascript">
+window.onload=function()
+{
+	var odiv=document.getElementById("div1");
+	var timer="";
+	odiv.onmouseover=function()
+	{
+		clearInterval(timer);
+		timer=setInterval(function()
+		{
+			
+			if(odiv.offsetLeft==0)
+			{
+				clearInterval(timer);
+			}else
+			{
+				odiv.style.left=odiv.offsetLeft+10+"px";
+			}
+		},500)
+		
+		
+	}
+	odiv.onmouseout=function()
+	{
+		clearInterval(timer);
+		timer=setInterval(function()
+		{
+			
+			if(odiv.offsetLeft==-100)
+			{
+				clearInterval(timer);
+			}else
+			{
+				odiv.style.left=odiv.offsetLeft-10+"px";
+			}
+		},200)
+		
+		
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="div1">
+<span>分享</span>
+</div>
+</body>
+</html>

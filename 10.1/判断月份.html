@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+  var y=parseInt(prompt("请输入年份"));
+  var m=parseInt(prompt("请输入月份"));
+  var d=parseInt(prompt("请输入天份"));
+  var n=0,er;
+  if((y%4==0&&y%100!=0)||(y%400==0))
+  {
+	  er=29;
+
+  }else
+  {
+	  er=28;
+  }
+  switch(m)
+  {
+	  case 12:n+=30;
+	  case 11:n+=31;
+	  case 10:n+=30;
+	  case  9:n+=31;
+	  case  8:n+=31;
+	  case  7:n+=30;
+	  case  6:n+=31;
+	  case  5:n+=30;
+	  case  4:n+=31;
+	  case  3:n+=er;
+	  case  2:n+=31;
+	  case  1:n+=d;
+	 
+  }
+  document.write(y+"年"+m+"月"+d+"日是当年的第"+n+"天")
+   
+</script>
+</head>
+
+<body>
+</body>
+</html>

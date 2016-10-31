@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style type="text/css">
+*{padding:0;margin:0;}
+ul{width:600px;height:30px;margin:30px auto;background:#9F0;}
+li{list-style:none;float:left;width:100px;line-height:30px;text-align:center;}
+li:hover{background:#03F;}
+a{text-decoration:none;display:block;}
+div{display:none;}
+</style>
+<script type="text/javascript">
+window.onload=function()
+{
+	var oul=document.getElementById("ul1");
+	var oli=oul.getElementsByTagName("li");
+	for(var i=0;i<oli.length;i++)
+	{
+		oli[i].onmouseover=function()
+		{
+			this.getElementsByTagName("div")[0].style.display="block";
+		}
+		
+		oli[i].onmouseout=function()
+		{
+			this.getElementsByTagName("div")[0].style.display="none";
+		}
+	}
+}
+</script>
+<body>
+
+<ul id="ul1">
+     <li >
+       111
+       <div>
+           <a href="#">1111</a>
+           <a href="#">1111</a>
+           <a href="#">1111</a>
+       </div>
+
+     </li>
+      <li>
+       222
+       <div>
+           <a href="#">2222</a>
+           <a href="#">2222</a>
+           <a href="#">2222</a>
+       </div>
+
+     </li>
+      <li>
+       333
+       <div>
+           <a href="#">1111</a>
+           <a href="#">1111</a>
+           <a href="#">1111</a>
+       </div>
+
+     </li>
+      <li>
+       444
+       <div>
+           <a href="#">1111</a>
+           <a href="#">1111</a>
+           <a href="#">1111</a>
+       </div>
+
+     </li>
+</ul>
+
+</body>
+</html>

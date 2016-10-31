@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+   window.onload=function()
+   {
+	   var bt1=document.getElementById("btn1");
+	   var bt2=document.getElementById("btn2");
+       var bt3=document.getElementById("btn3");
+       var bt4=document.getElementById("btn4");
+	   var im=document.getElementById("imgs");
+	   var timer="";
+	    var i=1;
+	   function start()
+	   {
+	   timer=setInterval(function()
+	   {
+		  
+		  im.src="img/"+i+".jpg";
+		  i++;
+		  if(i>4)
+		  {
+			  i=1;
+		  }
+	   },1000)
+	   }
+	   start();
+
+	   bt1.onclick=function()
+	   {
+		   clearInterval(start);
+		   i=1;
+		   im.src="img/1.jpg";
+	   }
+	     bt2.onclick=function()
+	   {
+		   clearInterval(start);
+		   i=2;
+		   im.src="img/2.jpg";
+	   }
+	     bt3.onclick=function()
+	   {
+		   clearInterval(start);
+		   i=3;
+		   im.src="img/3.jpg";
+	   }
+	     bt4.onclick=function()
+	   {
+		   clearInterval(start);
+		   i=4;
+		   im.src="img/4.jpg";
+	   }
+	   
+   }
+</script>
+</head>
+
+<body>
+ <input type="button" id="btn1" value="1"/>
+ <input type="button" id="btn2" value="2"/>
+ <input type="button" id="btn3" value="3"/>
+ <input type="button" id="btn4" value="4"/>
+ <img src="img/1.jpg" id="imgs"/>
+</body>
+</html>
